@@ -1,8 +1,18 @@
 # [SNAIL](https://github.com/matthewhudson/snail)
 
-##### Frontend test and audit framework. Extensible with plugins.
+#### Frontend test and audit framework. Extensible with plugins.
 
-Snail crawls a domain until no more unique URLS are left. Snail supports JS plugins (and WebHooks) to test certain conditions.
+Snail is a web-crawler with support for plugins (via WebHooks) to test certain conditions.
+
+## Introduction
+
+Snail is *not* a node.js module, it's a daemon and CLI for comprehensively testing and auditing the performance of web applications.
+
+### Installation
+
+Global installation is highly recommended in order to gain access to the CLI and plugins.
+
+	$ npm -g install snail
 
 ## Example Plugins
 

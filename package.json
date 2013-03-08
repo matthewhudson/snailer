@@ -1,0 +1,20 @@
+{
+    "name": "snail",
+    "description": "A frontend test and audit framework. Extensible with plugins.",
+    "version": "0.0.1",
+    "homepage": "https://github.com/matthewhudson/snail",
+    "keywords": [
+        "frontend",
+        "testing"
+    ],
+    "author": "Matthew Hudson <matthud@gmail.com>",
+    "bugs": "https://github.com/matthewhudson/snail/issues",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/matthewhudson/snail.git"
+    },
+    "license": "MIT",
+    "engines": {
+        "node": "0.8.17"
+    }
+}

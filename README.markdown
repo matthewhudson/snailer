@@ -23,6 +23,7 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Assets Cacheable?
 * Mobile Cacheable?
 * Selector Caching
+* Cache Function Pointers ([e.g.](http://blogs.msdn.com/b/ie/archive/2006/08/28/728654.aspx))
 * Do certain page vars/selectors exist?
 * Are certain assets present?
 * Status codes

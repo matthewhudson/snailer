@@ -22,6 +22,7 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Assets on CDN?
 * Assets Cacheable?
 * Mobile Cacheable?
+* Selector Caching
 * Do certain page vars/selectors exist?
 * Are certain assets present?
 * Status codes
@@ -31,3 +32,5 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Scan for injections, or vulnerabites. 
 * Forms without CSRF
 * YSlow stats
+* Find dead CSS
+* Find dead JS (based on selector)

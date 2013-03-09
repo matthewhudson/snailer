@@ -18,6 +18,8 @@
         "node": "0.8.17"
     },
     "dependencies": {
-        "coffee-script": "latest"
+        "coffee-script": "latest",
+        "webpipe": "latest",
+        "crawler": "0.2.5"
     }
 }

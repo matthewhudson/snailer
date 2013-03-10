@@ -1,5 +1,6 @@
-# [SNAIL](https://github.com/matthewhudson/snail)
+# [SNAIL](https://github.com/matthewhudson/snail) [![Build Status](https://travis-ci.org/matthewhudson/snail.png?branch=master)](https://travis-ci.org/matthewhudson/snail)
 
+## PRE-ALPHA SOFTWARE!
 #### Frontend test and audit framework. Extensible with plugins.
 
 Snail is a web-crawler with support for plugins (via [WebPipes](http://www.webpipes.org/)) to test certain conditions.

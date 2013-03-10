@@ -1,6 +1,6 @@
 {
     "name": "snail",
-    "description": "A frontend test and audit framework. Extensible with plugins.",
+    "description": "A frontend test and audit framework. Extensible with WebPipes.",
     "version": "0.0.1",
     "homepage": "https://github.com/matthewhudson/snail",
     "keywords": [

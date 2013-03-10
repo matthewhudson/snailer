@@ -5,19 +5,26 @@ helpers = require '../src/helpers'
 vows
   .describe('Helpers')
   .addBatch
-    'getHostname(http://google.com)':
+    'getHostname(http://example.com)':
       topic: -> 
-        helpers.getHostname 'http://google.com'
+        helpers.getHostname 'http://example.com'
 
-      'returns "google.com"': (topic) ->
-        assert.equal topic, 'google.com'
+      'returns "example.com"': (topic) ->
+        assert.equal topic, 'example.com'
 
-    'getHostname(http://blog.github.com)':
+    'getHostname(http://www.example.com)':
       topic: -> 
-        helpers.getHostname 'http://blog.github.com'
+        helpers.getHostname 'http://www.example.com'
 
-      'returns "blog.github.com"': (topic) ->
-        assert.equal topic, 'blog.github.com'
+      'returns "example.com"': (topic) ->
+        assert.equal topic, 'example.com'
+
+    'getHostname(http://blog.example.com)':
+      topic: -> 
+        helpers.getHostname 'http://blog.example.com'
+
+      'returns "blog.example.com"': (topic) ->
+        assert.equal topic, 'blog.example.com'
     
 
   .export(module)

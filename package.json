@@ -20,7 +20,7 @@
     "dependencies": {
         "coffee-script": "latest",
         "webpipe": "latest",
-        "crawler": "0.2.5"
+        "crawler": "0.2.4"
     },
     "devDependencies": {
         "vows": "0.7.0"

@@ -23,7 +23,8 @@
     "dependencies": {
         "coffee-script": "latest",
         "webpipe": "latest",
-        "crawler": "0.2.4"
+        "crawler": "0.2.4",
+        "underscore": "1.4.4"
     },
     "devDependencies": {
         "vows": "0.7.0"

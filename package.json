@@ -27,5 +27,8 @@
     },
     "scripts": {
         "test": "vows --spec"
+    },
+    "bin": {
+        "snail": "./bin/snail"
     }
 }

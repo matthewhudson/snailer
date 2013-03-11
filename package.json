@@ -5,7 +5,10 @@
     "homepage": "https://github.com/matthewhudson/snail",
     "keywords": [
         "frontend",
-        "testing"
+        "testing",
+        "audit",
+        "webpipes",
+        "webpipe"
     ],
     "author": "Matthew Hudson <matthud@gmail.com>",
     "bugs": "https://github.com/matthewhudson/snail/issues",

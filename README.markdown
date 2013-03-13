@@ -3,7 +3,7 @@
 ## PRE-ALPHA SOFTWARE!
 #### Frontend test and audit framework. Extensible with plugins.
 
-Snail is a web-crawler with support for plugins (via [WebPipes](http://www.webpipes.org/)) to test certain conditions.
+Snail is a web-crawler with support for plugins (via [WebPipes](http://www.webpipes.org/)) for testing and auditing websites.
 
 ## Introduction
 

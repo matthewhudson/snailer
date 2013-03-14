@@ -24,7 +24,6 @@ vows
     'Create a new Config':
       topic: -> 
         new config.Config
-      
 
       'and we do c.getHostname(http://example.com)':
         topic: (config) -> 
@@ -82,14 +81,13 @@ vows
           'the "spell-check" plugin options is an object': (plugin) ->
             assert.equal _.isObject(plugin.opts), true
 
- .addBatch
+.addBatch
     'Save a Config to filesystem':
       topic: -> 
         new config.Config
       
       'when we do c.save()':
         topic: (config) -> 
-          config.open()
           config.addHostname 'http://example.com'
           config.save()
         

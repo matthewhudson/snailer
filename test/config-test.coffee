@@ -131,4 +131,5 @@ vows
 
           'returns false': (config) ->
             assert.equal config, false
+
   .export(module)

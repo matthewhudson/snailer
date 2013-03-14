@@ -13,7 +13,7 @@ Snail is *not* a node.js module, it's a daemon and CLI for comprehensively testi
 
 Global installation is highly recommended in order to gain access to the CLI and plugins.
 
-	$ npm -g install snail
+	$ npm [-g] install snail
 
 ## Example Plugins
 

@@ -38,6 +38,9 @@ class exports.Config
     else
       @config[hostname] = []
 
+    @save()
+    @config[hostname]
+
   getHostname: (hostname) ->
     hostname = helpers.getHostname hostname
 

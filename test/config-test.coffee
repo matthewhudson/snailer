@@ -101,6 +101,19 @@ vows
           assert.equal _.isArray(config['example.com']), true
 
   .addBatch
+    'Add a plugin that already exists':
+      topic: -> 
+        new config.Config
+      
+      'when we call addPlugin() twice':
+        topic: (config) -> 
+          config.addPlugin 'http://example.com', 'spell-check'
+          config.addPlugin 'http://example.com', 'spell-check'
+        
+        'returns false': (plugin) ->
+          assert.equal plugin, false
+          
+  .addBatch
     'Add a hostname that already exists':
       topic: -> 
         config = new config.Config

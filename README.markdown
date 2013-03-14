@@ -17,6 +17,8 @@ Global installation is highly recommended in order to gain access to the CLI and
 
 ## Example Plugins
 
+* [YSlow](http://yslow.org/node-server/)
+* [Google Insights](https://developers.google.com/speed/docs/insights/v1/getting_started)
 * Average, mean, median, max page size
 * Response time
 * Number of asset hosts
@@ -33,7 +35,6 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Scan for spelling mistakes/grammar
 * Scan for injections, or vulnerabites. 
 * Forms without CSRF
-* YSlow stats
 * Find dead CSS
 * Find dead JS (based on selector)
 * Determine if certain "dead" marketing-speak isn't supposed to appear.

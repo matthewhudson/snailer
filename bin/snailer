@@ -1,0 +1,5 @@
+#!/usr/bin/env coffee
+
+snailer = require '../src/snailer-cli'
+
+snailer.run();

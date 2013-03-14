@@ -1,8 +1,8 @@
 {
-    "name": "snail",
+    "name": "snailer",
     "description": "A frontend test and audit framework. Extensible with WebPipes.",
     "version": "0.0.1",
-    "homepage": "https://github.com/matthewhudson/snail",
+    "homepage": "https://github.com/matthewhudson/snailer",
     "keywords": [
         "frontend",
         "testing",
@@ -12,10 +12,10 @@
         "cli"
     ],
     "author": "Matthew Hudson <matthud@gmail.com>",
-    "bugs": "https://github.com/matthewhudson/snail/issues",
+    "bugs": "https://github.com/matthewhudson/snailer/issues",
     "repository": {
         "type": "git",
-        "url": "git://github.com/matthewhudson/snail.git"
+        "url": "git://github.com/matthewhudson/snailer.git"
     },
     "license": "MIT",
     "engines": {
@@ -34,7 +34,7 @@
         "test": "vows --spec"
     },
     "bin": {
-        "snail": "./bin/snail"
+        "snailer": "./bin/snailer"
     },
     "preferGlobal": true
 }

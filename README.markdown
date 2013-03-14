@@ -1,19 +1,19 @@
-# [SNAIL](https://github.com/matthewhudson/snail) [![Build Status](https://travis-ci.org/matthewhudson/snail.png?branch=master)](https://travis-ci.org/matthewhudson/snail)
+# [SNAILER](https://github.com/matthewhudson/snailer) [![Build Status](https://travis-ci.org/matthewhudson/snailer.png?branch=master)](https://travis-ci.org/matthewhudson/snailer)
 
 ## PRE-ALPHA SOFTWARE!
 #### Frontend test and audit framework. Extensible with plugins.
 
-Snail is a web-crawler with support for plugins (via [WebPipes](http://www.webpipes.org/)) for testing and auditing websites.
+Snailer is a web-crawler with support for plugins (via [WebPipes](http://www.webpipes.org/)) for testing and auditing websites.
 
 ## Introduction
 
-Snail is *not* a node.js module, it's a daemon and CLI for comprehensively testing and auditing the performance of web applications.
+Snailer is *not* a node.js module, it's a daemon and CLI for comprehensively testing and auditing the performance of web applications.
 
 ### Installation
 
 Global installation is highly recommended in order to gain access to the CLI and plugins.
 
-	$ npm [-g] install snail
+	$ npm [-g] install snailer
 
 ## Example Plugins
 
@@ -37,3 +37,4 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Find dead CSS
 * Find dead JS (based on selector)
 * Determine if certain "dead" marketing-speak isn't supposed to appear.
+* Find candidates for sprites ([http://spriteme.org/](via SpriteMe]))

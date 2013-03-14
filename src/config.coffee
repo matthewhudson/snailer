@@ -7,7 +7,7 @@ class exports.Config
 
   constructor: ->
     platform = if process.platform is 'win32' then 'USERPROFILE' else 'HOME'
-    @file = path.join process.env[platform], '.snail'
+    @file = path.join process.env[platform], '.snailer'
     @open()
     @config
 

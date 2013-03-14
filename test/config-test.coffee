@@ -122,11 +122,11 @@ vows
         topic: (config) -> 
           config.addHostname 'http://etc.com'
 
-        'returns an empty list of plugins': (config) ->
-          assert.equal config.length, 0
+        'returns an empty list of plugins': (plugins) ->
+          assert.equal plugins.length, 0
 
         'calling addHostname(http://etc.com)':
-          topic: (file, config) -> 
+          topic: (plugins, config) -> 
             config.addHostname 'http://etc.com'
 
           'returns false': (config) ->

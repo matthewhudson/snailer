@@ -64,6 +64,7 @@ class exports.Config
         name: plugin_name
         opts: opts
 
+      @save()
       @config[hostname]
 
   getPlugin: (hostname, plugin_name) ->

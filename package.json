@@ -8,7 +8,8 @@
         "testing",
         "audit",
         "webpipes",
-        "webpipe"
+        "webpipe",
+        "cli"
     ],
     "author": "Matthew Hudson <matthud@gmail.com>",
     "bugs": "https://github.com/matthewhudson/snail/issues",

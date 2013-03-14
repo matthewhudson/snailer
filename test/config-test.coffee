@@ -25,15 +25,6 @@ vows
       topic: -> 
         new config.Config
       
-      'when we do c.open()':
-        topic: (config) -> 
-          config.open()
-        
-        'returns an object': (config) ->
-          assert.equal _.isObject(config), true
-
-        'returns an empty file': (config) ->
-          assert.equal _.size(config), 0
 
       'and we do c.getHostname(http://example.com)':
         topic: (config) -> 
@@ -69,7 +60,6 @@ vows
       
       'when we do c.addPlugin(spell-check)':
         topic: (config) -> 
-          config.open()
           config.addHostname 'http://example.com'
           config.addPlugin 'http://example.com', 'spell-check', {}
         

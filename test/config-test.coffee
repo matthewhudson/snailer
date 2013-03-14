@@ -105,7 +105,6 @@ vows
       topic: -> 
         config = new config.Config
         config.addHostname 'http://example.com'
-        config.addHostname 'http://example.com'
 
       'returns false': (config) ->
         assert.equal config, false

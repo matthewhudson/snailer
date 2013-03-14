@@ -1,3 +1,5 @@
 #!/usr/bin/env coffee
 
-require('../src/snail-cli').run();
+snail = require '../src/snail-cli'
+
+snail.run();

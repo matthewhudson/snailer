@@ -9,13 +9,11 @@ class exports.Config
     platform = if process.platform is 'win32' then 'USERPROFILE' else 'HOME'
     @file = path.join process.env[platform], '.snailer'
     @open()
-    @config
 
   # Return contents of ~/.snail or return an empty object {}
   open: ->
     @config = JSON.parse try fs.readFileSync @file, 'utf-8' catch err then '{}'
     @save()
-    @config
 
   # Returns false on fail, or the file contents
   save: ->
@@ -28,7 +26,6 @@ class exports.Config
   reset: ->
     @config = {}
     @save()
-    @config
 
   addHostname: (hostname) ->
     hostname = helpers.getHostname hostname

@@ -105,21 +105,30 @@ vows
       topic: -> 
         new config.Config
       
-      'when we call addPlugin() twice':
+      'when we call addPlugin() twice with same args':
         topic: (config) -> 
           config.addPlugin 'http://example.com', 'spell-check'
           config.addPlugin 'http://example.com', 'spell-check'
         
         'returns false': (plugin) ->
           assert.equal plugin, false
-          
+
   .addBatch
     'Add a hostname that already exists':
       topic: -> 
-        config = new config.Config
-        config.addHostname 'http://example.com'
+        new config.Config
 
-      'returns false': (config) ->
-        assert.equal config, false
+      'calling addHostname(http://etc.com)':
+        topic: (config) -> 
+          config.addHostname 'http://etc.com'
 
+        'returns an empty list of plugins': (config) ->
+          assert.equal config.length, 0
+
+        'calling addHostname(http://etc.com)':
+          topic: (file, config) -> 
+            config.addHostname 'http://etc.com'
+
+          'returns false': (config) ->
+            assert.equal config, false
   .export(module)

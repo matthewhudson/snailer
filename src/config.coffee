@@ -9,6 +9,7 @@ class exports.Config
     platform = if process.platform is 'win32' then 'USERPROFILE' else 'HOME'
     @file = path.join process.env[platform], '.snail'
     @open()
+    @config
 
   # Return contents of ~/.snail or return an empty object {}
   open: ->
@@ -27,6 +28,7 @@ class exports.Config
   reset: ->
     @config = {}
     @save()
+    @config
 
   addHostname: (hostname) ->
     hostname = helpers.getHostname hostname
@@ -52,7 +54,10 @@ class exports.Config
   addPlugin: (hostname, plugin_name, opts) ->
     hostname = helpers.getHostname hostname
 
-    if not @getHostname hostname
+    if not _.size opts 
+      opts = {}
+
+    if @getPlugin hostname, plugin_name
       false
     else
       @config[hostname].push 
@@ -63,23 +68,19 @@ class exports.Config
 
   getPlugin: (hostname, plugin_name) ->
     hostname = helpers.getHostname hostname
+    plugins = @getHostname hostname
 
-    if not @getHostname hostname or not plugin_name
+    if not plugins or not plugin_name
       false
     else 
-      plugins = @getHostname hostname
-      plugin = false
-      _.each plugins, (p) ->
-        if p.name is plugin_name
-          plugin = p
+      plugin = _.where plugins, { name : plugin_name }
 
-      if not _.isObject plugin
+      if not plugin.length
         false
-      else 
-        plugin
+      else
+        plugin[0]
 
   updatePlugin: (hostname, plugin_name, opts) ->
-    console.log 'updatePlugin'
     hostname = helpers.getHostname hostname
 
     if not @getHostname hostname or not plugin_name
@@ -88,8 +89,6 @@ class exports.Config
       if not @getPlugin hostname, plugin_name
         false
       else 
-        #@deletePlugin hostname, plugin_name
-        #@addPlugin hostname, plugin_name, opts
         _.each opts, (val, key) ->
           @config[hostname][plugin]['opts'][key] = val
 

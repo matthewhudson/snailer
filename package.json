@@ -36,5 +36,5 @@
     "bin": {
         "snail": "./bin/snail"
     },
-    "preferGlobal": true,
+    "preferGlobal": true
 }

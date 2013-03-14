@@ -37,4 +37,4 @@ Global installation is highly recommended in order to gain access to the CLI and
 * Find dead CSS
 * Find dead JS (based on selector)
 * Determine if certain "dead" marketing-speak isn't supposed to appear.
-* Find candidates for sprites ([http://spriteme.org/](via SpriteMe]))
+* Find candidates for sprites ([http://spriteme.org/](via SpriteMe))

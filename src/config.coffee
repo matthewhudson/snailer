@@ -106,3 +106,27 @@ class exports.Config
           @save()
           @config[hostname]
 
+  deletePlugin: (hostname, plugin_name) ->
+    self = @
+    hostname = helpers.getHostname hostname
+    index = false
+    plugins = @getHostname hostname
+
+    if not plugins or not plugin_name
+      false
+    else 
+      if not @getPlugin hostname, plugin_name
+        false
+      else 
+        _.each plugins, (element, idx, list) -> 
+          if element.name is plugin_name
+            index = idx
+
+        if index is false
+          false
+        else 
+          delete self.config[hostname][index]
+
+          @save()
+          @config[hostname]
+

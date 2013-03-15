@@ -125,8 +125,7 @@ class exports.Config
         if index is false
           false
         else 
-          delete self.config[hostname][index]
-
+          @config[hostname].splice index, 1
           @save()
           @config[hostname]
 

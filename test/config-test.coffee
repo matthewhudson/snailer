@@ -132,4 +132,27 @@ vows
           'returns false': (config) ->
             assert.equal config, false
 
+  .addBatch
+    'Update a plugin':
+      topic: -> 
+        new config.Config
+      
+      'when we call addPlugin() and then updatePlugin()':
+        topic: (config) -> 
+          config.addHostname 'http://eg.com'
+          config.addPlugin 'http://eg.com', 'grammar-check', {}
+          config.updatePlugin 'http://eg.com', 'grammar-check', { hello : 'world' }
+        
+        'returns a list of plugins': (plugins) ->
+          assert.equal _.isArray(plugins), true
+
+        'returns a list with a single plugin': (plugins) ->
+          assert.equal plugins.length, 1
+
+        'plugin.name is "grammer-check"': (plugins) ->
+          assert.equal plugins[0].name, "grammar-check"
+
+        'plugin.opts has key "hello"': (plugins) ->
+          assert.equal plugins[0].opts.hasOwnProperty('hello'), true
+
   .export(module)

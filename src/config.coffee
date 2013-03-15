@@ -74,22 +74,35 @@ class exports.Config
     if not plugins or not plugin_name
       false
     else 
-      plugin = _.where plugins, { name : plugin_name }
+      plugin = _.findWhere plugins, { name : plugin_name }
 
-      if not plugin.length
+      if not _.size plugin
         false
       else
-        plugin[0]
+        plugin
 
   updatePlugin: (hostname, plugin_name, opts) ->
+    self = @
     hostname = helpers.getHostname hostname
+    index = false
+    plugins = @getHostname hostname
 
-    if not @getHostname hostname or not plugin_name
+    if not plugins or not plugin_name
       false
     else 
       if not @getPlugin hostname, plugin_name
         false
       else 
-        _.each opts, (val, key) ->
-          @config[hostname][plugin]['opts'][key] = val
+        _.each plugins, (element, idx, list) -> 
+          if element.name is plugin_name
+            index = idx
+
+        if index is false
+          false
+        else 
+          _.each opts, (val, key) ->
+            self.config[hostname][index]['opts'][key] = val
+
+          @save()
+          @config[hostname]
 

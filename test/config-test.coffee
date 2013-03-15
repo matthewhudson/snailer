@@ -154,5 +154,21 @@ vows
 
         'plugin.opts has key "hello"': (plugins) ->
           assert.equal plugins[0].opts.hasOwnProperty('hello'), true
+  .addBatch
+    'Delete a plugin':
+      topic: -> 
+        new config.Config
+      
+      'when we call addPlugin() and then deletePlugin()':
+        topic: (config) -> 
+          config.addHostname 'http://ie.com'
+          config.addPlugin 'http://ie.com', 'grammar-check', {}
+          config.deletePlugin 'http://ie.com', 'grammar-check'
+        
+        'returns a list of plugins': (plugins) ->
+          assert.equal _.isArray(plugins), true
+
+        'returns a list with a no plugins': (plugins) ->
+          assert.equal plugins.length, 0
 
   .export(module)

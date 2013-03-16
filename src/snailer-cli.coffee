@@ -4,10 +4,13 @@ usage = ->
   console.log """
     Usage: snail COMMAND [command-specific-options]
 
-      snail addplugin NAME ARGS
-      snail updateplugin NAME ARGS
-      snail help
-
+    -h -help
+    -V -version
+    -s -service [start|pause|stop|restart]
+    -a -add <hostname> <plugin> <options>
+    -u -update <hostname> <plugin> <options>
+    -d -delete <hostname> <plugin> 
+    -c -config Manage the config info? Get summary/printout
   """
   process.exit 1
 

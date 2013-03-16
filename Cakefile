@@ -14,7 +14,7 @@ task 'docs', 'copy documentation to gh-pages branch', ->
     (sh "docco src/*.*coffee'")
     (sh "mv docs docs_tmp")
     (sh "git checkout gh-pages")
-    (sh "mv docs_tmp/* docs")
+    (sh "mv docs_tmp docs")
     (sh "git add docs/*")
     (sh "git commit -m 'Updating documentation from master'")
     (sh "git checkout master")

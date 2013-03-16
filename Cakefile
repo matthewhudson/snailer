@@ -12,6 +12,8 @@ sh = (command) -> (k) ->
 task 'docs', 'copy documentation to gh-pages branch', ->
   series [
     (sh "docco src/*.*coffee")
+    (sh "docco README.markdown")
+    (sh "mv docs/README.html docs/index.html")
     (sh "mv docs docs_tmp")
     (sh "git checkout gh-pages")
     (sh "mv docs_tmp docs")

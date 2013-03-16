@@ -1,3 +1,8 @@
+# The `Config` class is responsible for managing the `~/.snailer` JSON 
+# configuration file. This configuration maintains all the settings configured 
+# via the `snailer` CLI. The Snailer daemon uses `Config` to read settings.
+
+# External dependencies.
 fs      = require 'fs'
 path    = require 'path'
 _       = require 'underscore'

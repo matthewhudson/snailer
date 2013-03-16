@@ -18,4 +18,5 @@ task 'docs', 'copy documentation to gh-pages branch', ->
     (sh "git add docs/*")
     (sh "git commit -m 'Updating documentation from master'")
     (sh "git checkout master")
+    (sh "git push origin gh-pages")
   ]

@@ -16,7 +16,7 @@ task 'docs', 'copy documentation to gh-pages branch', ->
     (sh "mv docs/README.html docs/index.html")
     (sh "mv docs docs_tmp")
     (sh "git checkout gh-pages")
-    (sh "rm docs")
+    (sh "rm -rf docs")
     (sh "mv docs_tmp docs")
     (sh "git add docs/*")
     (sh "git commit -m 'Updating documentation from master'")

@@ -22,7 +22,7 @@ Global installation is highly recommended in order to gain access to the CLI and
 * [Config](http://snailer.org/config.html)
 * [Helpers](http://snailer.org/helpers.html)
 * [CLI](http://snailer.org/snailer-cli.html)
-* [Daemon](http://snailer.org/snail-daemon.html)
+* [Daemon](http://snailer.org/snailer-daemon.html)
 
 
 ## Example Plugins

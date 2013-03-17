@@ -20,7 +20,7 @@ task 'docs', 'copy documentation to gh-pages branch', ->
     (sh "git checkout gh-pages")
     (sh "cp -r docs_tmp/* .")
     (sh "rm -rf docs_tmp")
-    (sh "git add *")
+    (sh "git add .")
     (sh "git commit -m 'Updating documentation from master'")
     (sh "git checkout master")
     (sh "git push origin gh-pages")

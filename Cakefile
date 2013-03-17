@@ -13,7 +13,7 @@ task 'docs', 'copy documentation to gh-pages branch', ->
   series [
     (sh "docco src/*.*coffee")
     (sh "docco README.markdown -l linear -o index_tmp")
-    (sh "mv docs/README.html docs/index.html")
+    (sh "mv index_tmp/README.html index_tmp/index.html")
     (sh "git add docs/*")
     (sh "git commit -m 'Updating docs'")
     (sh "cp -r docs docs_tmp")

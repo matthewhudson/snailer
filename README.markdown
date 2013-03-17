@@ -15,6 +15,16 @@ Global installation is highly recommended in order to gain access to the CLI and
 
 	$ npm [-g] install snailer
 
+### Documentation
+
+#### Annotated Source Code
+
+* [Config](http://snailer.org/config.html)
+* [Helpers](http://snailer.org/helpers.html)
+* [CLI](http://snailer.org/snailer-cli.html)
+* [Daemon](http://snailer.org/snail-daemon.html)
+
+
 ## Example Plugins
 
 * [YSlow](http://yslow.org/node-server/)

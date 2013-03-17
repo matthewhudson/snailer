@@ -1,8 +1,16 @@
+# The `snailer` command-line interface. Handles command-line configuration 
+# settings and starting, stopping, restarting, and pausing the daemon.
+
+# External dependencies.
 helpers = require './helpers'
 
+# Read the version from the package.json
+version = JSON.parse(fs.readFileSync("#{__dirname}/package.json")).version
+
+# The help banner that is printed when `snailer` is called without arguments.
 usage = ->
   console.log """
-    Usage: snail COMMAND [command-specific-options]
+    Usage: snailer COMMAND [command-specific-options]
 
     -h -help
     -V -version
@@ -14,7 +22,7 @@ usage = ->
   """
   process.exit 1
 
-
+# Run `snailer` by parsing passed options and determining what action to take.
 exports.run = ->
   args = process.argv[2..]
   usage() if args.length < 1
